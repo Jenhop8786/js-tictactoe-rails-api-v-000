@@ -3,17 +3,17 @@
 var turn = 0;
 var gameId = 0;
 var winCombinations= [
-    [0,1,2], 
-    [3,4,5], 
-    [6,7,8], 
-    
-    [0,3,6], 
-    [1,4,7], 
-    [2,5,8], 
-    
-    [0,4,8], 
-    [2,4,6] 
-    
+    [0,1,2],
+    [3,4,5],
+    [6,7,8],
+
+    [0,3,6],
+    [1,4,7],
+    [2,5,8],
+
+    [0,4,8],
+    [2,4,6]
+
 ];
 
 function player () {
@@ -40,7 +40,6 @@ function checkWinner () {
     let board = [];
 
     $("td").text((index, square) => board[index] = square)
-    // populating an imaginary board by index (see http://api.jquery.com/text/#text2)
 
     winCombinations.forEach(function(combo) {
         let spot0 = combo[0];
